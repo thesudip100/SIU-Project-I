@@ -110,4 +110,4 @@ root=Tk()
 ob=Hospital(root)
 root.mainloop()
 
-gh
+
