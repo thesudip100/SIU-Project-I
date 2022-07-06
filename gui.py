@@ -66,15 +66,41 @@ class Hospital:
 
         Department=Label(DataFrameLeft,text="Department:",font=("times new roman",14,"bold"),padx=6,pady=12)
         Department.grid(row=0,column=2)
-        combo_department=ttk.Combobox(DataFrameLeft,state="readonly",font=("times new roman",13,"bold"),width=33)
+        combo_department=ttk.Combobox(DataFrameLeft,state="readonly",font=("times new roman",13,"bold"),width=30)
         combo_department['value']=("ENT","Internal Medicine","Gynaecology","Opthalmic","Orthopaedic","Pediatrics","Anesthesiology","ICU")
         combo_department.grid(row=0,column=3)
 
         Doctor=Label(DataFrameLeft,text="Doctor in charge:",font=("times new roman",14,"bold"),padx=6,pady=12)
         Doctor.grid(row=1,column=2)
-        combo_doctor=ttk.Combobox(DataFrameLeft,state="readonly",font=("times new roman",13,"bold"),width=33)
+        combo_doctor=ttk.Combobox(DataFrameLeft,state="readonly",font=("times new roman",13,"bold"),width=30)
         combo_doctor['value']=("Dr.Subodh","Dr.Sunil","Dr.Rachana","Dr.Bikesh","Dr.Surya","Dr.Ratna","Dr.Neeshma","Dr.Pranil")
         combo_doctor.grid(row=1,column=3)
+
+        Medical_History=Label(DataFrameLeft,text="Medical History:",font=("times new roman",14,"bold"),padx=3,pady=12)
+        Medical_History.grid(row=2,column=2)
+        Medical_History_text=Entry(DataFrameLeft,font=("arial",11),width=36)
+        Medical_History_text.grid(row=2,column=3)
+
+        Diagnosis=Label(DataFrameLeft,text="Initial Diagnois:",font=("times new roman",14,"bold"),padx=3,pady=12)
+        Diagnosis.grid(row=3,column=2)
+        Diagnosis_text=Entry(DataFrameLeft,font=("arial",11),width=36)
+        Diagnosis_text.grid(row=3,column=3)
+
+        Allergic=Label(DataFrameLeft,text="Allergens to Patient:",font=("times new roman",14,"bold"),padx=3,pady=12)
+        Allergic.grid(row=4,column=2)
+        Allergic_text=Entry(DataFrameLeft,font=("arial",11),width=36)
+        Allergic_text.grid(row=4,column=3)
+
+        Followup=Label(DataFrameLeft,text="Followup Date:",font=("times new roman",14,"bold"),padx=3,pady=12)
+        Followup.grid(row=5,column=2)
+        Followup_text=Entry(DataFrameLeft,font=("arial",11),width=36)
+        Followup_text.grid(row=5,column=3)
+
+        
+
+
+
+
 
 
 
