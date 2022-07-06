@@ -44,23 +44,41 @@ class Hospital:
         addresstext=Entry(DataFrameLeft,font=("arial",11),width=40)
         addresstext.grid(row=1,column=1)
 
-        lbldob=Label(DataFrameLeft,text="Date of birth:",font=("times new roman",14,"bold"),padx=3,pady=8)
+        lbldob=Label(DataFrameLeft,text="Date of birth:",font=("times new roman",14,"bold"),padx=3,pady=12)
         lbldob.grid(row=2,column=0)
         dobtext=Entry(DataFrameLeft,font=("arial",11),width=40)
         dobtext.grid(row=2,column=1)
 
-        lblpatientid=Label(DataFrameLeft,text="Patient ID:",font=("times new roman",14,"bold"),padx=3,pady=8)
+        lblpatientid=Label(DataFrameLeft,text="Patient ID:",font=("times new roman",14,"bold"),padx=3,pady=12)
         lblpatientid.grid(row=3,column=0)
         patientidtext=Entry(DataFrameLeft,font=("arial",11),width=40)
         patientidtext.grid(row=3,column=1)
 
-        
+        lblAdmissionDate=Label(DataFrameLeft,text="Admission Date:",font=("times new roman",14,"bold"),padx=3,pady=12)
+        lblAdmissionDate.grid(row=4,column=0)
+        admissiondate_text=Entry(DataFrameLeft,font=("arial",11),width=40)
+        admissiondate_text.grid(row=4,column=1)
+
+        Symptoms_seen=Label(DataFrameLeft,text="Symptoms seen:",font=("times new roman",14,"bold"),padx=3,pady=12)
+        Symptoms_seen.grid(row=5,column=0)
+        Symptoms_seen_text=Entry(DataFrameLeft,font=("arial",11),width=40)
+        Symptoms_seen_text.grid(row=5,column=1)
+
+        Department=Label(DataFrameLeft,text="Department:",font=("times new roman",14,"bold"),padx=6,pady=12)
+        Department.grid(row=0,column=2)
+        combo_department=ttk.Combobox(DataFrameLeft,state="readonly",font=("times new roman",13,"bold"),width=33)
+        combo_department['value']=("ENT","Internal Medicine","Gynaecology","Opthalmic","Orthopaedic","Pediatrics","Anesthesiology","ICU")
+        combo_department.grid(row=0,column=3)
+
+        Doctor=Label(DataFrameLeft,text="Doctor in charge:",font=("times new roman",14,"bold"),padx=6,pady=12)
+        Doctor.grid(row=1,column=2)
+        combo_doctor=ttk.Combobox(DataFrameLeft,state="readonly",font=("times new roman",13,"bold"),width=33)
+        combo_doctor['value']=("Dr.Subodh","Dr.Sunil","Dr.Rachana","Dr.Bikesh","Dr.Surya","Dr.Ratna","Dr.Neeshma","Dr.Pranil")
+        combo_doctor.grid(row=1,column=3)
 
 
 
-
-
-        
+       
 
 root=Tk()
 ob=Hospital(root)
