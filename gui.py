@@ -32,6 +32,31 @@ class Hospital:
         DetailsFrame.place(x=0,y=595,width=1530,height=180)
 
         #Data Frame Left Info
+        
+
+        lblName=Label(DataFrameLeft,text="Patient Name:",font=("times new roman",14,"bold"),padx=3,pady=8)
+        lblName.grid(row=0,column=0)
+        nametext=Entry(DataFrameLeft,font=("arial",11),width=40)
+        nametext.grid(row=0,column=1)
+
+        lblAddress=Label(DataFrameLeft,text="Patient Address:",font=("times new roman",14,"bold"),padx=3,pady=8)
+        lblAddress.grid(row=1,column=0)
+        addresstext=Entry(DataFrameLeft,font=("arial",11),width=40)
+        addresstext.grid(row=1,column=1)
+
+        lbldob=Label(DataFrameLeft,text="Date of birth:",font=("times new roman",14,"bold"),padx=3,pady=8)
+        lbldob.grid(row=2,column=0)
+        dobtext=Entry(DataFrameLeft,font=("arial",11),width=40)
+        dobtext.grid(row=2,column=1)
+
+        lblpatientid=Label(DataFrameLeft,text="Patient ID:",font=("times new roman",14,"bold"),padx=3,pady=8)
+        lblpatientid.grid(row=3,column=0)
+        patientidtext=Entry(DataFrameLeft,font=("arial",11),width=40)
+        patientidtext.grid(row=3,column=1)
+
+        
+
+
 
 
 
