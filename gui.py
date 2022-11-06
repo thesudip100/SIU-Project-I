@@ -155,13 +155,13 @@ class Hospital:
         Department=Label(DataFrameLeft,text="Department:",font=("times new roman",14,"bold"),padx=6,pady=12)
         Department.grid(row=0,column=2)
         combo_department=ttk.Combobox(DataFrameLeft,state="readonly",font=("times new roman",13,"bold"),textvariable=self.Depart,width=30)
-        combo_department['value']=("General OPD","ENT","Internal Medicine","Gynaecology","Opthalmic","Orthopaedic","Pediatrics","Anesthesiology","ICU")
+        combo_department['value']=("General OPD","ENT","Internal Medicine","Gynaecology","Opthalmic","Orthopaedic","Pediatrics","Anesthesiology","ICU","Urology","Neuro Surgery","Radiology")
         combo_department.grid(row=0,column=3)
 
         Doctor=Label(DataFrameLeft,text="Doctor in charge:",font=("times new roman",14,"bold"),padx=6,pady=12)
         Doctor.grid(row=1,column=2)
         combo_doctor=ttk.Combobox(DataFrameLeft,state="readonly",font=("times new roman",13,"bold"),textvariable=self.Doctor,width=30)
-        combo_doctor['value']=("Dr.Prasansha","Dr.Subodh","Dr.Sunil","Dr.Rachana","Dr.Bikesh","Dr.Surya","Dr.Ratna","Dr.Neeshma","Dr.Pranil")
+        combo_doctor['value']=("Dr.Prasansha","Dr.Subodh","Dr.Sunil","Dr.Rachana","Dr.Bikesh","Dr.Surya","Dr.Ratna","Dr.Neeshma","Dr.Pranil","Dr.Sudip","Dr.Aarohi")
         combo_doctor.grid(row=1,column=3)
 
         Medical_History=Label(DataFrameLeft,text="Medical History:",font=("times new roman",14,"bold"),padx=3,pady=12)
@@ -198,10 +198,10 @@ class Hospital:
         btnDelete = Button(ButtonFrame, text = "Delete",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ))
         btnDelete.grid(row = 0, column = 4)
         
-        btnReset = Button(ButtonFrame, text = "Reset",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
+        btnReset = Button(ButtonFrame, text = "Reset",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ) )
         btnReset.grid(row = 0,column = 5 )
 
-        btnExit = Button(ButtonFrame, text = "Exit",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
+        btnExit = Button(ButtonFrame, text = "Exit",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ) )
         btnExit.grid(row = 0,column = 6)
 
 
