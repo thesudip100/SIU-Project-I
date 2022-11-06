@@ -192,10 +192,10 @@ class Hospital:
         btnPrescriptionData = Button(ButtonFrame, text = "Record Entry", bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
         btnPrescriptionData.grid(row=0,column = 2)
 
-        btnUpdate = Button(ButtonFrame, text = "Update",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
+        btnUpdate = Button(ButtonFrame, text = "Update",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ) )
         btnUpdate.grid(row = 0, column = 3)
 
-        btnDelete = Button(ButtonFrame, text = "Delete",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ))
+        btnDelete = Button(ButtonFrame, text = "Delete",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ))
         btnDelete.grid(row = 0, column = 4)
         
         btnReset = Button(ButtonFrame, text = "Reset",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ) )
@@ -207,7 +207,7 @@ class Hospital:
 
         ####DATA FRAME RIGHT############
 
-        self.Prescription=Text(DataFrameRight,font=("arial",11,"bold"),width=57,height=17,padx=2,pady=2)
+        self.Prescription=Text(DataFrameRight,font=("arial",11,"bold",),width=57,height=17,padx=2,pady=2)
         self.Prescription.grid(row=0,column=0)
 
 
@@ -220,16 +220,16 @@ class Hospital:
         btnPrescriptionDate = Button(ButtonFrame, command=self.iPrescriptionData, font=("arial",13,"bold"),bg="blue",fg="white",text="Record Entry", width=24, padx=1,pady=1)
         btnPrescriptionDate.grid(row=0,column=1)
 
-        btnupdate = Button(ButtonFrame, font=("arial",13,"bold"),bg="blue",fg="white",text="Update", width=24, padx=1,pady=1)
+        btnupdate = Button(ButtonFrame, font=("arial",13,"bold"),bg="blue",fg="white",text="Update", width=23, padx=1,pady=1)
         btnupdate.grid(row=0,column=2)
 
-        btndelete = Button(ButtonFrame, font=("arial",13,"bold"),bg="blue",fg="white",text="Delete", width=24, padx=1,pady=1)
+        btndelete = Button(ButtonFrame, font=("arial",13,"bold"),bg="blue",fg="white",text="Delete", width=23, padx=1,pady=1)
         btndelete.grid(row=0,column=3)
 
-        btnclear = Button(ButtonFrame, command=self.iclear, font=("arial",13,"bold"),bg="blue",fg="white",text="Clear", width=24, padx=1,pady=1)
+        btnclear = Button(ButtonFrame, command=self.iclear, font=("arial",13,"bold"),bg="blue",fg="white",text="Clear", width=22, padx=1,pady=1)
         btnclear.grid(row=0,column=4) 
 
-        btnexit = Button(ButtonFrame, command = self.iexit, font=("arial",13,"bold"),bg="blue",fg="white",text="Exit", width=24, padx=1,pady=1)
+        btnexit = Button(ButtonFrame, command = self.iexit, font=("arial",13,"bold"),bg="blue",fg="white",text="Exit", width=22, padx=1,pady=1)
         btnexit.grid(row=0,column=5)
 
 
