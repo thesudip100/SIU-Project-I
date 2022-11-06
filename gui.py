@@ -183,6 +183,27 @@ class Hospital:
         Followup.grid(row=5,column=2)
         Followup_text=Entry(DataFrameLeft,font=("arial",11),textvariable=self.Followup,width=36)
         Followup_text.grid(row=5,column=3)
+        
+        # **------------------------------BUTTONS------------------------------------------------------*
+
+        btnPrescription = Button(ButtonFrame,text = "Prescription",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ))
+        btnPrescription.grid(row=0,column = 1)
+
+        btnPrescriptionData = Button(ButtonFrame, text = "Prescription Data", bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
+        btnPrescriptionData.grid(row=0,column = 2)
+
+        btnUpdate = Button(ButtonFrame, text = "Update",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
+        btnUpdate.grid(row = 0, column = 3)
+
+        btnDelete = Button(ButtonFrame, text = "Delete",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ))
+        btnDelete.grid(row = 0, column = 4)
+        
+        btnReset = Button(ButtonFrame, text = "Reset",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
+        btnReset.grid(row = 0,column = 5 )
+
+        btnExit = Button(ButtonFrame, text = "Exit",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
+        btnExit.grid(row = 0,column = 6)
+
 
         ####DATA FRAME RIGHT############
 
@@ -383,3 +404,9 @@ root.mainloop()
 
 
 
+<<<<<<< HEAD
+=======
+root=Tk()
+ob=Hospital(root)
+root.mainloop()
+>>>>>>> 3dce43fc44f614d504453296a2a4f806ab60bf79
