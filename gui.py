@@ -189,7 +189,7 @@ class Hospital:
         btnPrescription = Button(ButtonFrame,text = "Prescription",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ))
         btnPrescription.grid(row=0,column = 1)
 
-        btnPrescriptionData = Button(ButtonFrame, text = "Prescription Data", bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
+        btnPrescriptionData = Button(ButtonFrame, text = "Record Entry", bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
         btnPrescriptionData.grid(row=0,column = 2)
 
         btnUpdate = Button(ButtonFrame, text = "Update",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
@@ -217,7 +217,7 @@ class Hospital:
         btnPrescription = Button(ButtonFrame, command=self.iprescription, font=("arial",13,"bold"),bg="blue",fg="white",text="Presciption",width=24, padx=0,pady=1)
         btnPrescription.grid(row=0,column=0)
 
-        btnPrescriptionDate = Button(ButtonFrame, command=self.iPrescriptionData, font=("arial",13,"bold"),bg="blue",fg="white",text="Prescription Date", width=24, padx=1,pady=1)
+        btnPrescriptionDate = Button(ButtonFrame, command=self.iPrescriptionData, font=("arial",13,"bold"),bg="blue",fg="white",text="Record Entry", width=24, padx=1,pady=1)
         btnPrescriptionDate.grid(row=0,column=1)
 
         btnupdate = Button(ButtonFrame, font=("arial",13,"bold"),bg="blue",fg="white",text="Update", width=24, padx=1,pady=1)
