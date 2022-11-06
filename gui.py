@@ -388,25 +388,3 @@ class Hospital:
 root = Tk()
 ob = Hospital(root)
 root.mainloop()  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<<<<<<< HEAD
-=======
-root=Tk()
-ob=Hospital(root)
-root.mainloop()
->>>>>>> 3dce43fc44f614d504453296a2a4f806ab60bf79
