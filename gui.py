@@ -1,8 +1,6 @@
-from tkinter import*
+from tkinter import *
 from tkinter import ttk 
 from tkinter.ttk import Progressbar
-import random 
-import datetime
 from tkinter import messagebox 
 import mysql.connector  
 
@@ -27,7 +25,6 @@ w.overrideredirect(1)
 
 s=ttk.Style() 
 s.theme_use("clam")
-s.configure("red.Horizontal.TProgressbar",fg="red",bg="#4f4f4f")
 progress = Progressbar(w,style="white.Horizontal.TProgressbar",orient=HORIZONTAL,length = 427,mode='determinate')
 
 def progress_bar():
@@ -87,7 +84,7 @@ class Hospital:
         self.Followup=StringVar()
 
  
-        ########MAKING THE TITLE OF THE HOMESCREEN###############
+        ########MAKING Title Dataframe###############
         lbltitle = Label(self.root,bd=20,relief=RIDGE,text="Hospital Management System",fg="red",bg="white",font=("times new roman",50,"bold"))
         lbltitle.pack(side=TOP,fill=X)
 
@@ -96,18 +93,18 @@ class Hospital:
         ## Making Dataframe
 
         DataFrame=Frame(self.root,bd=20,relief=RIDGE)
-        DataFrame.place(x=0,y=130,width=1530,height=400,)
+        DataFrame.place(x=0,y=130,width=1530,height=400)
 
-        ######## Adding hospital in left side of dataframe ##
-        DataFrameLeft=LabelFrame(DataFrame,bd=10,relief=RIDGE,padx=10,font=("times new roman",20,"bold"),text="Patient hospital")
+        ######## Left data frame #########
+        DataFrameLeft=LabelFrame(DataFrame,bd=10,relief=RIDGE,padx=10,font=("times new roman",20,"bold"),text="Patient Information")
         DataFrameLeft.place(x=0,y=5,width=980,height=350)
 
-        ##### Adding in the right side of the dataframe
+        ##### Making right dataframe#######
 
         DataFrameRight=LabelFrame(DataFrame,bd=10,relief=RIDGE,padx=10,font=("times new roman",20,"bold"),text="Prescriptions")
         DataFrameRight.place(x=990,y=5,width=500,height=350)
 
-        ######## Buttons Frame #######
+        ######## Making Buttons Frame #######
 
         ButtonFrame=Frame(self.root,bd=20,relief=RIDGE)
         ButtonFrame.place(x=0,y=520,width=1530,height=70)
@@ -184,26 +181,6 @@ class Hospital:
         Followup_text=Entry(DataFrameLeft,font=("arial",11),textvariable=self.Followup,width=36)
         Followup_text.grid(row=5,column=3)
         
-        # **------------------------------BUTTONS------------------------------------------------------*
-
-        btnPrescription = Button(ButtonFrame,text = "Prescription",bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ))
-        btnPrescription.grid(row=0,column = 1)
-
-        btnPrescriptionData = Button(ButtonFrame, text = "Record Entry", bg="blue",fg ="white", width =23,font = ("Times New Roman",12,"bold" ) )
-        btnPrescriptionData.grid(row=0,column = 2)
-
-        btnUpdate = Button(ButtonFrame, text = "Update",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ) )
-        btnUpdate.grid(row = 0, column = 3)
-
-        btnDelete = Button(ButtonFrame, text = "Delete",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ))
-        btnDelete.grid(row = 0, column = 4)
-        
-        btnReset = Button(ButtonFrame, text = "Reset",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ) )
-        btnReset.grid(row = 0,column = 5 )
-
-        btnExit = Button(ButtonFrame, text = "Exit",bg="blue",fg ="white", width =22,font = ("Times New Roman",12,"bold" ) )
-        btnExit.grid(row = 0,column = 6)
-
 
         ####DATA FRAME RIGHT############
 
@@ -214,26 +191,26 @@ class Hospital:
 
         ################## Making buttons ############################ 
 
-        btnPrescription = Button(ButtonFrame, command=self.iprescription, font=("arial",13,"bold"),bg="blue",fg="white",text="Presciption",width=24, padx=0,pady=1)
+        btnPrescription = Button(ButtonFrame, command=self.iprescription, font=("arial",13,"bold"),bg="blue",fg="white",text="Presciption Details",width=24, padx=4,pady=1)
         btnPrescription.grid(row=0,column=0)
 
-        btnPrescriptionDate = Button(ButtonFrame, command=self.iPrescriptionData, font=("arial",13,"bold"),bg="blue",fg="white",text="Record Entry", width=24, padx=1,pady=1)
-        btnPrescriptionDate.grid(row=0,column=1)
+        btnRecordEntry = Button(ButtonFrame, command=self.iPrescriptionData, font=("arial",13,"bold"),bg="blue",fg="white",text="Record Entry", width=24, padx=4,pady=1)
+        btnRecordEntry.grid(row=0,column=1)
 
-        btnupdate = Button(ButtonFrame, font=("arial",13,"bold"),bg="blue",fg="white",text="Update", width=23, padx=1,pady=1)
+        btnupdate = Button(ButtonFrame, command=self.update, font=("arial",13,"bold"),bg="blue",fg="white",text="Update", width=24, padx=4,pady=1)
         btnupdate.grid(row=0,column=2)
 
-        btndelete = Button(ButtonFrame, font=("arial",13,"bold"),bg="blue",fg="white",text="Delete", width=23, padx=1,pady=1)
+        btndelete = Button(ButtonFrame,command=self.delete, font=("arial",13,"bold"),bg="blue",fg="white",text="Delete", width=24, padx=4,pady=1)
         btndelete.grid(row=0,column=3)
 
-        btnclear = Button(ButtonFrame, command=self.iclear, font=("arial",13,"bold"),bg="blue",fg="white",text="Clear", width=22, padx=1,pady=1)
+        btnclear = Button(ButtonFrame, command=self.iclear, font=("arial",13,"bold"),bg="blue",fg="white",text="Clear", width=23, padx=4,pady=1)
         btnclear.grid(row=0,column=4) 
 
-        btnexit = Button(ButtonFrame, command = self.iexit, font=("arial",13,"bold"),bg="blue",fg="white",text="Exit", width=22, padx=1,pady=1)
+        btnexit = Button(ButtonFrame, command = self.iexit, font=("arial",13,"bold"),bg="blue",fg="white",text="Exit", width=23, padx=4,pady=1)
         btnexit.grid(row=0,column=5)
 
 
-        ############## Making Table in the button and scroll bar ############## 
+        ############## Making Table and scroll bar ############## 
 
         scroll_x = ttk.Scrollbar(DetailsFrame, orient=HORIZONTAL)
         scroll_y = ttk.Scrollbar(DetailsFrame, orient=VERTICAL)
@@ -279,14 +256,14 @@ class Hospital:
         self.hospital_table.column("Followup",width=100)
         
 
-        self.hospital_table.pack(fil=BOTH,expand=1) 
+        self.hospital_table.pack(fill=BOTH,expand=1) 
 
         ##### While CLicking the data is shown in the table
 
         self.hospital_table.bind("<ButtonRelease-1>",self.get_cursor)
  
         ######### Fetching the Data ########### 
-        self.fatch_data() 
+        self.fetch_data() 
         
 
 
@@ -304,15 +281,42 @@ class Hospital:
                                     self.Allergens.get(),self.Followup.get()))
             
             conn.commit()
-            self.fatch_data()
-            # self.update_data()
+            self.fetch_data()
             conn.close()
             messagebox.showinfo("Success","Successfully inserted into database") 
 
+    
+    ########### Update button functionality########
+    def update(self):
+            conn = mysql.connector.connect(host="localhost",username="root",password="",database="mydatabase")
+            my_cursor = conn.cursor()
+            my_cursor.execute("update hospital set Patient_Name=%s,Address=%s,Date_Of_Birth=%s, Admission_Date=%s, Symptom=%s, Depart=%s, Doctor=%s, Medical_History=%s, Diagnosis=%s, Allergens=%s, Followup_Date=%s where ID=%s",(
+                                    self.Patient_Name.get(),self.Address.get(),self.DOB.get(),self.Admission.get(),
+                                    self.Symptom.get(),self.Depart.get(),self.Doctor.get(),self.Medical_History.get(),self.Diagnosis.get(),
+                                    self.Allergens.get(),self.Followup.get(),self.ID.get() ))
+            
+            conn.commit()
+            self.fetch_data()
+            conn.close()
+            messagebox.showinfo("Updated","Data updated successfully") 
 
+    
+    def delete(self):
+        conn = mysql.connector.connect(host="localhost",username="root",password="",database="mydatabase")
+        my_cursor = conn.cursor()
 
+        query = "delete from hospital where ID=%s"
+        value = (self.ID.get(),)
+        my_cursor.execute(query,value)
 
-    def fatch_data(self): 
+        conn.commit()
+        conn.close()
+        self.fetch_data() 
+        messagebox.showinfo("Deleted","Data Deleted from the database")
+
+    ###########Fetching data in the details table########
+
+    def fetch_data(self): 
         conn = mysql.connector.connect(host="localhost",username="root",password="",database="mydatabase")
         my_cursor = conn.cursor()
         my_cursor.execute("select * from hospital")
@@ -379,8 +383,8 @@ class Hospital:
 
 
     def iexit(self):
-        iex = messagebox.askyesno("Hospital management System", "You want to exit?")
-        if iex>0: 
+        iex = messagebox.askquestion("Hospital management System", "You want to exit?")
+        if iex=="yes": 
             root.destroy() 
             return
 
